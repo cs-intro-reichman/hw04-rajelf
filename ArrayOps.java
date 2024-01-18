@@ -6,19 +6,19 @@ public class ArrayOps {
 
     public static int findMissingInt(int[] array) {
         int n = array.length;
-        boolean contains = false;
 
-        for (int i = 0; i < n; i++) {
-            contains = false;
-            for (int j = 0; j <= n; j++) {
+        for (int i = 0; i <= n; i++) {
+            boolean contains = false;
+            for (int j = 0; j < n; j++) {
                 if (array[j] == i) {
                     contains = true;
                 }
             }
-            if (!contains)
+            if (contains==false){
                 return i;
+            }
         }
-        return -1;
+        return 1;
     }
 
     public static int secondMaxValue(int[] array) {
